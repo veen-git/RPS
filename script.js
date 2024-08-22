@@ -77,7 +77,7 @@ function playRound(humanSelection,computerSelection) {
             return "Computer wins, bad luck.";
         }
     }
-    
+ 
 }
 
 let Statement = "You picked " + humanChoice + " and Computer picked " + computerChoice;
