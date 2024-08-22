@@ -1,4 +1,3 @@
-
 function getComputerChoice() {
     let i = Math.random();
         if (i <= 0.33) {
@@ -12,6 +11,15 @@ function getComputerChoice() {
         else {
             return "scissors";
         }    
+
+    }
+
+function getHumanChoice() {
+
+    let choice = prompt("Pick one: rock, paper, or scissors");
+
+    let choiceStatement = 'you picked ' + choice;
+
+    return choiceStatement;
     
 }
-
