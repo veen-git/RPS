@@ -44,36 +44,42 @@ function getHumanChoice() {
 function playRound(humanSelection,computerSelection) {
     if (humanSelection == "rock") {
         if (computerSelection == "scissors") {
+            humanScore = ++humanScore;
             return "Congrats, You win!!";
         }
         else if (computerSelection == "rock") {
             return "It's a draw.";
         }
         else {
+            computerScore = ++computerScore;
             return "Computer wins, bad luck.";
         }
     }
 
     else if (humanSelection == "scissors") {
         if (computerSelection == "paper") {
-            return "Congrats, You win!!";
+            humanScore = ++humanScore;
+            return "Congrats, You win!!"; 
         }
         else if (computerSelection == "scissors") {
             return "It's a draw."
         }
         else {
+            computerScore = ++computerScore;
             return "Computer wins, bad luck.";
         }
     }
 
     else {
         if (computerSelection == "rock") {
+            humanScore = ++humanScore;
             return "Congrats, You win!!";
         }
         else if (computerSelection == "paper") {
             return "It's a draw."
         }
         else {
+            computerScore = ++computerScore;
             return "Computer wins, bad luck.";
         }
     }
