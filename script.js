@@ -5,6 +5,9 @@ let humanChoice = getHumanChoice();
 let computerChoice = getComputerChoice();
 
 
+
+
+
 function getComputerChoice() {
     let i = Math.random();
         if (i <= 0.33) {
@@ -24,15 +27,63 @@ function getComputerChoice() {
 function getHumanChoice() {
 
     let choice = prompt("Pick one: rock, paper, or scissors");
+        if (choice === null) {
+        return getHumanChoice();
+    }    
+    
+        else if (choice.toLowerCase() == "rock" || choice.toLowerCase() == "paper" || choice.toLowerCase() == "scissors") {
+            return choice;
+        }    
 
-    return choice
+        else {
+            return getHumanChoice();
+        }
+            
+    }
 
-    /*let choiceStatement = 'you picked ' + choice;
+function playRound(humanSelection,computerSelection) {
+    if (humanSelection == "rock") {
+        if (computerSelection == "scissors") {
+            return "Congrats, You win!!";
+        }
+        else if (computerSelection == "rock") {
+            return "It's a draw.";
+        }
+        else {
+            return "Computer wins, bad luck.";
+        }
+    }
 
-    return choiceStatement;*/
+    else if (humanSelection == "scissors") {
+        if (computerSelection == "paper") {
+            return "Congrats, You win!!";
+        }
+        else if (computerSelection == "scissors") {
+            return "It's a draw."
+        }
+        else {
+            return "Computer wins, bad luck.";
+        }
+    }
+
+    else {
+        if (computerSelection == "rock") {
+            return "Congrats, You win!!";
+        }
+        else if (computerSelection == "paper") {
+            return "It's a draw."
+        }
+        else {
+            return "Computer wins, bad luck.";
+        }
+    }
     
 }
 
-function playRound(humanChoice,computerChoice) {
+let Statement = "You picked " + humanChoice + " and Computer picked " + computerChoice;
 
-}
+console.log(Statement);
+console.log(playRound(humanChoice,computerChoice));
+
+
+
