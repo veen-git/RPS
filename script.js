@@ -25,9 +25,11 @@ function getHumanChoice() {
 
     let choice = prompt("Pick one: rock, paper, or scissors");
 
-    let choiceStatement = 'you picked ' + choice;
+    return choice
 
-    return choiceStatement;
+    /*let choiceStatement = 'you picked ' + choice;
+
+    return choiceStatement;*/
     
 }
 
