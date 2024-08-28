@@ -15,9 +15,11 @@ function getComputerChoice() {
 
     }
 
-function getHumanChoice() {
+let computerChoice = getComputerChoice();
 
-    let choice = prompt("Pick one: rock, paper, or scissors");
+/*function getHumanChoice() {
+
+    let choice = 
         if (choice === null) {
         return;
     }    
@@ -30,10 +32,18 @@ function getHumanChoice() {
             return getHumanChoice();
         }
             
-    }
+    }*/
+let humanChoice = " ";
+const btn = document.querySelector("button");
+btn.addEventListener(click, () => {
+   humanChoice = btn.textContent();
+});
+
+btn.addEventListener(click, playRound(humanChoice,computerChoice));
 
 
-function playGame() {
+
+/*function playGame() {*/
 
     let humanScore = 0;
     let computerScore = 0;
@@ -98,27 +108,13 @@ function playGame() {
 
         console.log("your Score: " + humanScore + "  Computer Score: " + computerScore)
 
+        
     }
 
-let humanChoice = getHumanChoice();
+/*let humanChoice = getHumanChoice();
 let computerChoice = getComputerChoice();
-playRound(humanChoice,computerChoice);
-
-humanChoice = getHumanChoice();
-computerChoice = getComputerChoice();
-playRound(humanChoice,computerChoice);    
-
-humanChoice = getHumanChoice();
-computerChoice = getComputerChoice();
-playRound(humanChoice,computerChoice);    
-
-humanChoice = getHumanChoice();
-computerChoice = getComputerChoice();
-playRound(humanChoice,computerChoice);    
-
-humanChoice = getHumanChoice();
-computerChoice = getComputerChoice();
-playRound(humanChoice,computerChoice);    
+playRound(humanChoice,computerChoice);*/
+   
 
 console.log(".")
 console.log(".")
