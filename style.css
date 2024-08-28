@@ -1,0 +1,22 @@
+.heading{
+    text-align: center;
+}
+
+.buttonContainer{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+    justify-content: space-evenly;
+}
+
+.selectChoice {
+    padding: 8px;
+    font-size: x-large;
+    background-color: aqua;
+    width: 325px;
+    height: 50px;
+    cursor: pointer;
+    align-items: center;
+}
+
