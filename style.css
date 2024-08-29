@@ -1,3 +1,6 @@
+.body{
+    display: flex;
+}
 .heading{
     text-align: center;
 }
@@ -19,4 +22,5 @@
     cursor: pointer;
     align-items: center;
 }
+
 
